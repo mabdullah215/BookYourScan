@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ebedec"
+    android:layout_height="match_parent"
+    tools:context=".LoadingActivity">
+
+    <ImageView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/item_header"
+        android:layout_height="@dimen/_60sdp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/bottom_txt"
+        android:textSize="@dimen/_8sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="CopyRights (C) All Rights Reserved\nBookYourScan"
+        android:layout_height="wrap_content"/>
+
+
+    <ProgressBar
+        android:layout_width="@dimen/_25sdp"
+        android:layout_above="@+id/bottom_txt"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/_25sdp"/>
+
+</RelativeLayout>

@@ -14,10 +14,11 @@ import com.bumptech.glide.Glide;
 import com.spitel.bookyourscan.R;
 
 
-public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHolder>
+public class DiagnosticsAdapter extends RecyclerView.Adapter<DiagnosticsAdapter.ViewHolder>
 {
 
-    private String[] imgList={"Diagnostics","Home Care","Doctor Appointment","Ambulance","Blood Bank","Pharmacy","Health Insurance","Crowd Funding"};
+    private String[] titleList={"MRI SCAN","CT Digital X-Ray","Digital Mammogram","Ultrasound","ECG","2D ECHO","TMT","PFT","BMD"};
+    private String[] imgList={"MRI SCAN","CT Digital","Mammogram","Ultrasound","ECG","2D ECHO","TMT","PFT","BMD"};
     private OnItemClickListener onItemClickListener;
     private Context mContext;
 
@@ -27,7 +28,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
     }
 
 
-    public MainMenuAdapter(Context context)
+    public DiagnosticsAdapter(Context context)
     {
         this.mContext=context;
     }
@@ -74,10 +75,9 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.ViewHo
 
         public void setDetails(int position)
         {
-
             String src="file:///android_asset/main/"+imgList[position]+".png";
             Glide.with(mContext).load(src).into(sourceImage);
-            tvTitle.setText(imgList[position]);
+            tvTitle.setText(titleList[position]);
         }
 
         @Override

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar_layout_back"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="8"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:layout_width="match_parent"
+                        android:id="@+id/img_header"
+                        android:layout_height="@dimen/_100sdp"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img_left"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_arrow_left"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img_right"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_heading"
+                    android:text="Services"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_15sdp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/data_list"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/bottom_banner"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:id="@+id/bottom_footer"
+                android:layout_alignParentBottom="true"
+                android:layout_height="@dimen/_60sdp"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:id="@+id/img_bottom_left"
+                android:src="@drawable/ic_arrow_left"
+                android:layout_height="wrap_content"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:src="@drawable/ic_arrow_right"
+                android:id="@+id/img_bottom_right"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
